@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+</head>
+<body>
+<h1>Music Player</h1>
+<table>
+    <tr>
+    <thead>Currently Playing: Song</thead>
+    </tr>
+    <tr>
+<!--        <audio style="width: 500px;" controls autoplay>-->
+<!--&lt;!&ndash;            <a href>Play next</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <source src="audio\file.m4a" type="audio/mpeg">&ndash;&gt;-->
+<!--            <source src="F:\Spring Boot Projects\MuzikPlear\src\main\resources\audio\file.m4a" type="audio/mpeg">-->
+<!--        </audio>-->
+    </tr>
+
+</table>
+<h2>Songs playlist</h2>
+<table>
+    <tr th:each="musicFile : ${musicFiles}">
+        <td th:text="${musicFile.id}"></td>
+        <td th:text="${musicFile.name}"></td>
+        <td>
+            <audio style="width: 500px;" controls autoplay>
+                <!--            <a href>Play next</a>-->
+                            <source src="/start" type="audio/mpeg">
+<!--                <source th:src="${musicFile.address+'/'+musicFile.name+'m4a'}" type="audio/mpeg">-->
+            </audio>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
