@@ -10,12 +10,14 @@ public class MusicFile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    private String artist;
     private String address;
 
-    public MusicFile(int id, String name, String address) {
+    public MusicFile(int id, String name, String address, String artist) {
         this.id = id;
         this.name = name;
         this.address = address;
+        this.artist=artist;
     }
 
     public MusicFile(){}
@@ -43,5 +45,13 @@ public class MusicFile {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 }

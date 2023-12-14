@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Management</title>
+</head>
+<body>
+<h1>User Login</h1>
+<h2>Login to your Account</h2>
+<form th:action="@{/login}" method="post">
+
+    <div class="form-floating mb-3">
+        <input type="text" id="username" name="LoginUserName" class="form-control" placeholder="xyz">
+        <label style="color:#000000;" for="username">Enter Username:</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" id="password" name="LoginUserName" class="form-control" placeholder="xyz">
+        <label style="color:#000000;" for="password">Enter Password:</label>
+    </div>
+
+
+<!--    <label for="username">Username:</label>-->
+<!--    <input type="text" id="username" name="LoginUserName"/>-->
+<!--    <label for="password">Password:</label>-->
+<!--    <input type="password" id="password" name="LoginUserPassword"/>-->
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>
+
+<!--<form method="post" role="form" th:action="@{/login}" class="form-horizontal">-->
+<!--    <div class="form-group mb-3">-->
+<!--        <label class="control-label"> Email</label>-->
+<!--        <input type="text" id="username" name="username" class="form-control" placeholder="Enter email address"/>-->
+<!--    </div>-->
+
+<!--    <div class="form-group mb-3">-->
+<!--        <label class="control-label"> Password</label>-->
+<!--        <input type="password" id="password" name="password" class="form-control" placeholder="Enter password"/>-->
+<!--    </div>-->
+<!--    <div class="form-group mb-3">-->
+<!--        <button type="submit" class="btn btn-primary" >Submit</button>-->
+<!--        <span> Not registered ?-->
+<!--            <a th:href="@{/register}">Register/Signup here</a>-->
+<!--        </span>-->
+<!--    </div>-->
+<!--</form>-->

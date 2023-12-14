@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Sign Up</title>
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <h1>User Registration - Sign Up</h1>
+    </div>
+    <form th:action="@{/register_user}" th:object="${user}"
+          method="post" style="max-width: 600px; margin: 0 auto;">
+        <div class="m-3">
+
+            <div class="form-floating mb-3">
+                <input th:field="*{email}" type="email" id="email" name="LoginEmail" class="form-control" placeholder="xyz">
+                <label style="color:#000000;" for="email">Enter Email:</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input th:field="*{username}" type="text" id="username" name="LoginUsername" class="form-control" placeholder="xyz">
+                <label style="color:#000000;" for="username">Enter Username:</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input th:field="*{password}" type="password" id="password" name="LoginPassword" class="form-control" placeholder="xyz">
+                <label style="color:#000000;" for="password">Enter Password:</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input th:field="*{name}" type="text" id="name" name="LoginName" class="form-control" placeholder="xyz">
+                <label style="color:#000000;" for="name">Enter Full Name:</label>
+            </div>
+
+<!--            <div class="form-group row">-->
+<!--                <label class="col-4 col-form-label">E-mail: </label>-->
+<!--                <div class="col-8">-->
+<!--                    <input type="email" th:field="*{email}" class="form-control" required />-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="form-group row">-->
+<!--                <label class="col-4 col-form-label">Username: </label>-->
+<!--                <div class="col-8">-->
+<!--                    <input type="text" th:field="*{username}" class="form-control" required />-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="form-group row">-->
+<!--                <label class="col-4 col-form-label">Password: </label>-->
+<!--                <div class="col-8">-->
+<!--                    <input type="password" th:field="*{password}" class="form-control"-->
+<!--                           required minlength="6" maxlength="10"/>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="form-group row">-->
+<!--                <label class="col-4 col-form-label">Name: </label>-->
+<!--                <div class="col-8">-->
+<!--                    <input type="text" th:field="*{name}" class="form-control"-->
+<!--                           required minlength="2" maxlength="20"/>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </form>
+    <p th:text="*{message}"></p>
+</div>
+</div>
+</body>
+</html>

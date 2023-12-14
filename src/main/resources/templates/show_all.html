@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+</head>
+<body>
+<h1>Music Player</h1>
+<h2>Songs playlist</h2>
+<table>
+    <tr th:each="musicFile : ${musicFiles}">
+        <td th:text="${musicFile.id}"></td>
+        <td th:text="${musicFile.name}"></td>
+        <td>
+<!--            <audio style="width: 500px;" controls autoplay>-->
+<!--                &lt;!&ndash;            <a href>Play next</a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                            <source src="/start/${musicFile.id}" type="audio/mpeg">&ndash;&gt;-->
+<!--                <source th:src="@{/start/{id}(id=${musicFile.id})}" type="audio/mpeg">-->
+<!--                &lt;!&ndash;                <source th:src="${musicFile.address+'/'+musicFile.name+'m4a'}" type="audio/mpeg">&ndash;&gt;-->
+<!--            </audio>-->
+            <a th:href="@{/music/addtoplaylist/{id}(id=${musicFile.id})}">Add To Playlist</a>
+<!--            <button type="submit">Add To Playlist</button>-->
+        </td>
+    </tr>
+</table>
+</body>
+</html>
